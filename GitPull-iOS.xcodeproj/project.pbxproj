@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		E81B026D1EB0AA7100EC71B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */; };
-		E81B026F1EB0AA7100EC71B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B026E1EB0AA7100EC71B4 /* ViewController.swift */; };
-		E81B02721EB0AA7100EC71B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B02701EB0AA7100EC71B4 /* Main.storyboard */; };
+		E81B02721EB0AA7100EC71B4 /* PullRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B02701EB0AA7100EC71B4 /* PullRequest.storyboard */; };
 		E81B02741EB0AA7100EC71B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81B02731EB0AA7100EC71B4 /* Assets.xcassets */; };
 		E81B02771EB0AA7100EC71B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B02751EB0AA7100EC71B4 /* LaunchScreen.storyboard */; };
 		E81B02821EB0AA7100EC71B4 /* GitPull_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B02811EB0AA7100EC71B4 /* GitPull_iOSTests.swift */; };
 		E81B028D1EB0AA7100EC71B4 /* GitPull_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B028C1EB0AA7100EC71B4 /* GitPull_iOSUITests.swift */; };
+		E81B029F1EB0AD5E00EC71B4 /* BaseRESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B029E1EB0AD5E00EC71B4 /* BaseRESTService.swift */; };
+		E81B02A21EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */; };
+		E81B02A41EB0B2F400EC71B4 /* GitPRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B02A31EB0B2F400EC71B4 /* GitPRService.swift */; };
+		E83150B51EB0B4DD00D7F1D0 /* GitServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B41EB0B4DD00D7F1D0 /* GitServiceConstants.swift */; };
+		E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B71EB0B57400D7F1D0 /* PullRequest.swift */; };
+		E83150BA1EB0C03600D7F1D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B91EB0C03600D7F1D0 /* User.swift */; };
+		E83150C11EB0C76B00D7F1D0 /* PullRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */; };
+		E83150C41EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150C31EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift */; };
+		E83150C61EB0CCC600D7F1D0 /* PullRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83150C51EB0CCC600D7F1D0 /* PullRequestCell.xib */; };
+		E849422A1EB0E88F005B88B8 /* Diff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84942291EB0E88F005B88B8 /* Diff.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +45,7 @@
 /* Begin PBXFileReference section */
 		E81B02691EB0AA7100EC71B4 /* GitPull-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitPull-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E81B026E1EB0AA7100EC71B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E81B02711EB0AA7100EC71B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E81B02711EB0AA7100EC71B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PullRequest.storyboard; sourceTree = "<group>"; };
 		E81B02731EB0AA7100EC71B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81B02761EB0AA7100EC71B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E81B02781EB0AA7100EC71B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,16 @@
 		E81B02881EB0AA7100EC71B4 /* GitPull-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitPull-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81B028C1EB0AA7100EC71B4 /* GitPull_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitPull_iOSUITests.swift; sourceTree = "<group>"; };
 		E81B028E1EB0AA7100EC71B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E81B029E1EB0AD5E00EC71B4 /* BaseRESTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRESTService.swift; path = Service/BaseRESTService.swift; sourceTree = "<group>"; };
+		E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkActivityIndicatorHelper.swift; path = Utilities/NetworkActivityIndicatorHelper.swift; sourceTree = "<group>"; };
+		E81B02A31EB0B2F400EC71B4 /* GitPRService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitPRService.swift; sourceTree = "<group>"; };
+		E83150B41EB0B4DD00D7F1D0 /* GitServiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitServiceConstants.swift; sourceTree = "<group>"; };
+		E83150B71EB0B57400D7F1D0 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequest.swift; path = Model/PullRequest.swift; sourceTree = "<group>"; };
+		E83150B91EB0C03600D7F1D0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestTableViewController.swift; path = UI/PullRequest/PullRequestTableViewController.swift; sourceTree = "<group>"; };
+		E83150C31EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestTableViewCell.swift; path = UI/PullRequest/Cell/PullRequestTableViewCell.swift; sourceTree = "<group>"; };
+		E83150C51EB0CCC600D7F1D0 /* PullRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PullRequestCell.xib; path = UI/PullRequest/Cell/PullRequestCell.xib; sourceTree = "<group>"; };
+		E84942291EB0E88F005B88B8 /* Diff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Diff.storyboard; path = UI/Diff/Diff.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +115,12 @@
 		E81B026B1EB0AA7100EC71B4 /* GitPull-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E83150BB1EB0C6DA00D7F1D0 /* UI */,
+				E83150B61EB0B55D00D7F1D0 /* Model */,
+				E81B02A01EB0AD7C00EC71B4 /* Utilities */,
+				E81B029D1EB0AD3E00EC71B4 /* Extentions */,
+				E81B029A1EB0ABE200EC71B4 /* Service */,
 				E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */,
-				E81B026E1EB0AA7100EC71B4 /* ViewController.swift */,
-				E81B02701EB0AA7100EC71B4 /* Main.storyboard */,
 				E81B02731EB0AA7100EC71B4 /* Assets.xcassets */,
 				E81B02751EB0AA7100EC71B4 /* LaunchScreen.storyboard */,
 				E81B02781EB0AA7100EC71B4 /* Info.plist */,
@@ -123,6 +144,84 @@
 				E81B028E1EB0AA7100EC71B4 /* Info.plist */,
 			);
 			path = "GitPull-iOSUITests";
+			sourceTree = "<group>";
+		};
+		E81B029A1EB0ABE200EC71B4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E83150B21EB0B4B500D7F1D0 /* Git */,
+				E81B029E1EB0AD5E00EC71B4 /* BaseRESTService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		E81B029D1EB0AD3E00EC71B4 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		E81B02A01EB0AD7C00EC71B4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E83150B21EB0B4B500D7F1D0 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				E81B02A31EB0B2F400EC71B4 /* GitPRService.swift */,
+				E83150B41EB0B4DD00D7F1D0 /* GitServiceConstants.swift */,
+			);
+			name = Git;
+			sourceTree = "<group>";
+		};
+		E83150B61EB0B55D00D7F1D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E83150B71EB0B57400D7F1D0 /* PullRequest.swift */,
+				E83150B91EB0C03600D7F1D0 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E83150BB1EB0C6DA00D7F1D0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E83150BD1EB0C71400D7F1D0 /* Diff */,
+				E83150BC1EB0C70200D7F1D0 /* PullRequest */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		E83150BC1EB0C70200D7F1D0 /* PullRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E83150C21EB0C7A700D7F1D0 /* Cell */,
+				E81B02701EB0AA7100EC71B4 /* PullRequest.storyboard */,
+				E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */,
+			);
+			name = PullRequest;
+			sourceTree = "<group>";
+		};
+		E83150BD1EB0C71400D7F1D0 /* Diff */ = {
+			isa = PBXGroup;
+			children = (
+				E84942291EB0E88F005B88B8 /* Diff.storyboard */,
+			);
+			name = Diff;
+			sourceTree = "<group>";
+		};
+		E83150C21EB0C7A700D7F1D0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E83150C31EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift */,
+				E83150C51EB0CCC600D7F1D0 /* PullRequestCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +331,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E849422A1EB0E88F005B88B8 /* Diff.storyboard in Resources */,
 				E81B02771EB0AA7100EC71B4 /* LaunchScreen.storyboard in Resources */,
 				E81B02741EB0AA7100EC71B4 /* Assets.xcassets in Resources */,
-				E81B02721EB0AA7100EC71B4 /* Main.storyboard in Resources */,
+				E83150C61EB0CCC600D7F1D0 /* PullRequestCell.xib in Resources */,
+				E81B02721EB0AA7100EC71B4 /* PullRequest.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +360,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81B026F1EB0AA7100EC71B4 /* ViewController.swift in Sources */,
+				E83150B51EB0B4DD00D7F1D0 /* GitServiceConstants.swift in Sources */,
+				E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */,
 				E81B026D1EB0AA7100EC71B4 /* AppDelegate.swift in Sources */,
+				E83150BA1EB0C03600D7F1D0 /* User.swift in Sources */,
+				E83150C11EB0C76B00D7F1D0 /* PullRequestTableViewController.swift in Sources */,
+				E81B029F1EB0AD5E00EC71B4 /* BaseRESTService.swift in Sources */,
+				E83150C41EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift in Sources */,
+				E81B02A21EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift in Sources */,
+				E81B02A41EB0B2F400EC71B4 /* GitPRService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +404,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E81B02701EB0AA7100EC71B4 /* Main.storyboard */ = {
+		E81B02701EB0AA7100EC71B4 /* PullRequest.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E81B02711EB0AA7100EC71B4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = PullRequest.storyboard;
 			sourceTree = "<group>";
 		};
 		E81B02751EB0AA7100EC71B4 /* LaunchScreen.storyboard */ = {
@@ -413,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "GitPull-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.budhathoki..GitPull-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "GitPull-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.budhathoki..GitPull-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +615,7 @@
 				E81B02931EB0AA7100EC71B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E81B02941EB0AA7100EC71B4 /* Build configuration list for PBXNativeTarget "GitPull-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +624,7 @@
 				E81B02961EB0AA7100EC71B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E81B02971EB0AA7100EC71B4 /* Build configuration list for PBXNativeTarget "GitPull-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +633,7 @@
 				E81B02991EB0AA7100EC71B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
