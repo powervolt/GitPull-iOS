@@ -92,5 +92,4 @@ class DiffTableViewController: UITableViewController {
         self.viewModel.diffReloadIndex.insert(indexPath.section)
         self.tableView.reloadRows(at: [indexPath], with: .fade)
     }
-
 }

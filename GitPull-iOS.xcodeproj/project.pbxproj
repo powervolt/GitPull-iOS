@@ -22,6 +22,7 @@
 		E82F88491EB123460066EB89 /* DiffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88481EB123460066EB89 /* DiffTableViewCell.swift */; };
 		E82F884D1EB14AB40066EB89 /* LargeDiffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */; };
 		E82F88551EB1763A0066EB89 /* UIColor+DiffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */; };
+		E82F88571EB1A5160066EB89 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88561EB1A5160066EB89 /* String+Regex.swift */; };
 		E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B71EB0B57400D7F1D0 /* PullRequest.swift */; };
 		E83150BA1EB0C03600D7F1D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B91EB0C03600D7F1D0 /* User.swift */; };
 		E83150C11EB0C76B00D7F1D0 /* PullRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */; };
@@ -72,6 +73,7 @@
 		E82F88481EB123460066EB89 /* DiffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffTableViewCell.swift; path = UI/Diff/DiffCell/DiffTableViewCell.swift; sourceTree = "<group>"; };
 		E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeDiffTableViewCell.swift; path = UI/Diff/DiffCell/LargeDiffTableViewCell.swift; sourceTree = "<group>"; };
 		E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+DiffColor.swift"; path = "Utilities/UIColor+DiffColor.swift"; sourceTree = "<group>"; };
+		E82F88561EB1A5160066EB89 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Regex.swift"; path = "Utilities/String+Regex.swift"; sourceTree = "<group>"; };
 		E83150B71EB0B57400D7F1D0 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequest.swift; path = Model/PullRequest.swift; sourceTree = "<group>"; };
 		E83150B91EB0C03600D7F1D0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestTableViewController.swift; path = UI/PullRequest/PullRequestTableViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */,
 				E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */,
+				E82F88561EB1A5160066EB89 /* String+Regex.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */,
+				E82F88571EB1A5160066EB89 /* String+Regex.swift in Sources */,
 				E82F884D1EB14AB40066EB89 /* LargeDiffTableViewCell.swift in Sources */,
 				E82F88551EB1763A0066EB89 /* UIColor+DiffColor.swift in Sources */,
 				E82F88451EB122920066EB89 /* GitServiceConstants.swift in Sources */,

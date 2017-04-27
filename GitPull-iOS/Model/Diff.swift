@@ -14,11 +14,14 @@ enum DiffType {
 
 struct Diff {
     
+    static let lineNumberPattern = "@@\\s[+-]?\\d*\\,-?\\d*\\s[+-]?\\d*,\\d*\\s@@"
+    static let lineNumberExtractPattern = "\\s[+]\\d*"
+    
     private(set) var fileName: String
     private(set) var info: String
     private(set) var changes: [String]
     private(set) var type: DiffType?
-    
+    private(set) var startingLineNumber: Int?
     
     init?(diff: [String]) {
         //check if new or deleted file
@@ -43,5 +46,18 @@ struct Diff {
         self.changes = Array(changes)
         self.fileName = diff[2+offSet].replacingOccurrences(of: "--- a/", with: "")
         self.info = diff[4+offSet]
+        
+        self.startingLineNumber = getLineNumber(fromInfo: self.info)
+    }
+    
+    func getLineNumber(fromInfo string: String) -> Int? {
+        let linePattern = string.matchingString(pattern: Diff.lineNumberPattern)
+        if let linePattern = linePattern {
+            if let numberPattern = linePattern.matchingString(pattern: Diff.lineNumberExtractPattern) {
+                return Int(numberPattern.replacingOccurrences(of: " +", with: ""))
+            }
+        }
+        
+        return nil
     }
 }

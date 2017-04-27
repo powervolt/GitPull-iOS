@@ -27,4 +27,30 @@ extension UIColor {
             return UIColor(red:1.00, green:0.93, blue:0.93, alpha:1.0)
         }
     }
+    
+    static var diffInfoColor: UIColor {
+        get {
+            return UIColor(red:0.96, green:0.97, blue:1.00, alpha:1.0)
+        }
+    }
+    
+    static var diffDarkAddedColor: UIColor {
+        get {
+            return UIColor(red:0.92, green:1.00, blue:0.92, alpha:1.0)
+        }
+    }
+    
+    static var diffDarkDeletedColor: UIColor {
+        get {
+            return UIColor(red:1.00, green:0.93, blue:0.93, alpha:1.0)
+        }
+    }
+    
+    static var diffDarkInfoColor: UIColor {
+        get {
+            return UIColor(red:0.96, green:0.97, blue:1.00, alpha:1.0)
+        }
+    }
 }
+
+
