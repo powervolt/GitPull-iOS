@@ -19,8 +19,9 @@ class PullRequestTableViewController: UITableViewController {
     
         service.getPullRequests(status: .Open) { (pullRequests, error) in
             if let pullRequests = pullRequests {
-                self.pullRequests = pullRequests
+                self.pullRequests = pullRequests.sorted(by: {$0.number > $1.number})
                 DispatchQueue.main.async {
+                    self.navigationItem.title = "Pull Requests (\(self.pullRequests.count))"
                     self.tableView.reloadData()
                 }
             }
@@ -41,10 +42,10 @@ class PullRequestTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pullRequests.count
+        return self.pullRequests.count
     }
 
-    
+    // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PullRequestTableViewCell.reuseIdentifier, for: indexPath)
 
@@ -62,6 +63,18 @@ class PullRequestTableViewController: UITableViewController {
                 })
             }
         }
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Diff", bundle: nil)
+        if let vc = storyBoard.instantiateInitialViewController() as? DiffTableViewController {
+            let pr = self.pullRequests[indexPath.row]
+            vc.pullRequest = pr
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        
     }
 }

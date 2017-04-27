@@ -6,7 +6,7 @@
 //  Copyright © 2017 Bipin. All rights reserved.
 //
 
-class PullRequest {
+struct PullRequest {
 
     var title: String
     var diffUrl: String

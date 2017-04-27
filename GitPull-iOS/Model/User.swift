@@ -6,7 +6,7 @@
 //  Copyright © 2017 Bipin. All rights reserved.
 //
 
-class User {
+struct User {
 
     var login: String
     var avatarUrl: String?

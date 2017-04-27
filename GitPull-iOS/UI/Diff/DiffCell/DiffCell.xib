@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DiffTableViewCell" rowHeight="303" id="Nrj-6D-jBh" customClass="DiffTableViewCell" customModule="GitPull_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="303"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nrj-6D-jBh" id="fxo-iN-kbK">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="303"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS5-ij-QhM">
+                        <rect key="frame" x="8" y="25" width="369" height="270"/>
+                        <attributedString key="attributedText">
+                            <fragment>
+                                <string key="content">To create and insert a new instance of an Entity in the default context, you can use:
+ 
+ ```objective-c
++// Objective-C
+ Person *myPerson = [Person MR_createEntity];
+ ```
+ 
++```swift
++// Swift
++let myPerson = Person.mr_createEntity()
++```
++
++
+ To create and insert an entity into specific context:</string>
+                                <attributes>
+                                    <font key="NSFont" size="12" name=".SFNSText"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqz-9s-2lI">
+                        <rect key="frame" x="0.0" y="0.0" width="385" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKv-rl-q62">
+                                <rect key="frame" x="10" y="6" width="365" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91282063722610474" green="0.95374602079391479" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KKv-rl-q62" firstAttribute="centerX" secondItem="xqz-9s-2lI" secondAttribute="centerX" id="3zE-vF-4a4"/>
+                            <constraint firstAttribute="trailing" secondItem="KKv-rl-q62" secondAttribute="trailing" constant="10" id="9GQ-B7-CyB"/>
+                            <constraint firstAttribute="height" constant="25" id="EGF-xx-EOI"/>
+                            <constraint firstItem="KKv-rl-q62" firstAttribute="leading" secondItem="xqz-9s-2lI" secondAttribute="leading" constant="10" id="EjJ-TF-Ygm"/>
+                            <constraint firstItem="KKv-rl-q62" firstAttribute="centerY" secondItem="xqz-9s-2lI" secondAttribute="centerY" id="dwQ-wR-a3v"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="qS5-ij-QhM" secondAttribute="trailing" id="9kW-Va-ujV"/>
+                    <constraint firstItem="qS5-ij-QhM" firstAttribute="top" secondItem="xqz-9s-2lI" secondAttribute="bottom" id="T5F-Y0-FGQ"/>
+                    <constraint firstItem="xqz-9s-2lI" firstAttribute="leading" secondItem="fxo-iN-kbK" secondAttribute="leading" id="YBf-nr-P5u"/>
+                    <constraint firstItem="qS5-ij-QhM" firstAttribute="leading" secondItem="fxo-iN-kbK" secondAttribute="leadingMargin" id="dKZ-Tt-iPp"/>
+                    <constraint firstItem="xqz-9s-2lI" firstAttribute="top" secondItem="fxo-iN-kbK" secondAttribute="top" id="i74-va-yr4"/>
+                    <constraint firstAttribute="trailing" secondItem="xqz-9s-2lI" secondAttribute="trailing" id="q4U-t4-n0s"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qS5-ij-QhM" secondAttribute="bottom" id="r8r-kh-Ud6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="diffLabel" destination="qS5-ij-QhM" id="igS-1H-2QR"/>
+                <outlet property="fileNameLabel" destination="KKv-rl-q62" id="J1C-NN-itS"/>
+            </connections>
+            <point key="canvasLocation" x="-30.5" y="53.5"/>
+        </tableViewCell>
+    </objects>
+</document>
