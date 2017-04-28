@@ -15,10 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="385" height="303"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nrj-6D-jBh" id="fxo-iN-kbK">
-                <rect key="frame" x="0.0" y="0.0" width="385" height="303"/>
+                <rect key="frame" x="0.0" y="0.0" width="385" height="302.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS5-ij-QhM">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS5-ij-QhM">
                         <rect key="frame" x="8" y="25" width="369" height="270"/>
                         <string key="text">To create and insert a new instance of an Entity in the default context, you can use:
  

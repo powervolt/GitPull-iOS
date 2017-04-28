@@ -18,8 +18,8 @@ class PullRequestTableViewController: UITableViewController {
         self.setupTableViewCell()
         self.setupRefreshControl()
         
-        self.refreshControl?.beginRefreshing()
         self.fetchData()
+        self.navigationItem.title = "Magical Record"
     }
     
     func fetchData() {
@@ -27,7 +27,6 @@ class PullRequestTableViewController: UITableViewController {
             if let pullRequests = pullRequests {
                 self.pullRequests = pullRequests.sorted(by: {$0.number > $1.number})
                 DispatchQueue.main.async {
-                    self.navigationItem.title = "Pull Requests (\(self.pullRequests.count))"
                     self.tableView.reloadData()
                     if (self.refreshControl?.isRefreshing ?? false) {
                         self.refreshControl?.endRefreshing()
@@ -59,6 +58,14 @@ class PullRequestTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.pullRequests.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if(section == 0) {
+            return "\(self.pullRequests.count) \(PullRequestStatus.Open.rawValue) Pull Requests"
+        }
+        
+        return ""
     }
 
     // MARK: - Table view delegate

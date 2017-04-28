@@ -15,14 +15,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <activityIndicatorView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-cI-qsY">
-                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <rect key="frame" x="169" y="295" width="37" height="37"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ZRw-cI-qsY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BK2-CO-vqb"/>
+                <constraint firstItem="ZRw-cI-qsY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="BK2-CO-vqb"/>
                 <constraint firstItem="ZRw-cI-qsY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="msk-7s-YUt"/>
             </constraints>
             <point key="canvasLocation" x="-86" y="5"/>

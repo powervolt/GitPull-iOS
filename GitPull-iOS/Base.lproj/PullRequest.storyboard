@@ -12,13 +12,13 @@
         <scene sceneID="3ai-Sk-6Fa">
             <objects>
                 <tableViewController id="snM-g8-DFg" customClass="PullRequestTableViewController" customModule="GitPull_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="48" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hkj-sQ-ycd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="48" sectionHeaderHeight="18" sectionFooterHeight="18" id="Hkj-sQ-ycd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PullRequestCell" rowHeight="48" id="wcE-jK-J9u">
-                                <rect key="frame" x="0.0" y="28" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wcE-jK-J9u" id="fJ3-Cd-8Ra">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
