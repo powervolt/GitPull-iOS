@@ -7,13 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E812062B1EB26AD200B5E4F9 /* DiffSplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E812062A1EB26AD200B5E4F9 /* DiffSplitCell.xib */; };
+		E812062D1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E812062C1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift */; };
 		E81B026D1EB0AA7100EC71B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */; };
-		E81B026F1EB0AA7100EC71B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B026E1EB0AA7100EC71B4 /* ViewController.swift */; };
-		E81B02721EB0AA7100EC71B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B02701EB0AA7100EC71B4 /* Main.storyboard */; };
+		E81B02721EB0AA7100EC71B4 /* PullRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B02701EB0AA7100EC71B4 /* PullRequest.storyboard */; };
 		E81B02741EB0AA7100EC71B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81B02731EB0AA7100EC71B4 /* Assets.xcassets */; };
 		E81B02771EB0AA7100EC71B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B02751EB0AA7100EC71B4 /* LaunchScreen.storyboard */; };
 		E81B02821EB0AA7100EC71B4 /* GitPull_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B02811EB0AA7100EC71B4 /* GitPull_iOSTests.swift */; };
 		E81B028D1EB0AA7100EC71B4 /* GitPull_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B028C1EB0AA7100EC71B4 /* GitPull_iOSUITests.swift */; };
+		E81B029F1EB0AD5E00EC71B4 /* BaseRESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B029E1EB0AD5E00EC71B4 /* BaseRESTService.swift */; };
+		E81B02A21EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */; };
+		E82F883E1EB1126F0066EB89 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F883D1EB1126F0066EB89 /* Diff.swift */; };
+		E82F88441EB122920066EB89 /* GitPRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88421EB122920066EB89 /* GitPRService.swift */; };
+		E82F88451EB122920066EB89 /* GitServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88431EB122920066EB89 /* GitServiceConstants.swift */; };
+		E82F88471EB122B80066EB89 /* DiffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82F88461EB122B80066EB89 /* DiffCell.xib */; };
+		E82F88491EB123460066EB89 /* DiffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88481EB123460066EB89 /* DiffTableViewCell.swift */; };
+		E82F884D1EB14AB40066EB89 /* LargeDiffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */; };
+		E82F88551EB1763A0066EB89 /* UIColor+DiffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */; };
+		E82F88571EB1A5160066EB89 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88561EB1A5160066EB89 /* String+Regex.swift */; };
+		E82F885B1EB1C5E00066EB89 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F885A1EB1C5E00066EB89 /* DateFormatters.swift */; };
+		E82F885E1EB1CC110066EB89 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82F885D1EB1CC110066EB89 /* LoaderView.xib */; };
+		E82F88601EB1CCBB0066EB89 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F885F1EB1CCBB0066EB89 /* LoaderView.swift */; };
+		E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B71EB0B57400D7F1D0 /* PullRequest.swift */; };
+		E83150BA1EB0C03600D7F1D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B91EB0C03600D7F1D0 /* User.swift */; };
+		E83150C11EB0C76B00D7F1D0 /* PullRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */; };
+		E83150C41EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150C31EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift */; };
+		E83150C61EB0CCC600D7F1D0 /* PullRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83150C51EB0CCC600D7F1D0 /* PullRequestCell.xib */; };
+		E849422A1EB0E88F005B88B8 /* Diff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84942291EB0E88F005B88B8 /* Diff.storyboard */; };
+		E849422C1EB0F044005B88B8 /* GitDiffService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849422B1EB0F044005B88B8 /* GitDiffService.swift */; };
+		E849422E1EB0F1AE005B88B8 /* DiffTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849422D1EB0F1AE005B88B8 /* DiffTableViewController.swift */; };
+		E84942301EB0F494005B88B8 /* DiffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849422F1EB0F494005B88B8 /* DiffViewModel.swift */; };
+		E8A601291EB3749E00388109 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A601281EB3749E00388109 /* Queue.swift */; };
+		E8C74E131EB31CCB00E5B61F /* DiffRegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C74E121EB31CCB00E5B61F /* DiffRegexHelper.swift */; };
+		E8C74E171EB366DF00E5B61F /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C74E161EB366DF00E5B61F /* String+Lines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E812062A1EB26AD200B5E4F9 /* DiffSplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiffSplitCell.xib; sourceTree = "<group>"; };
+		E812062C1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffSplitTableViewCell.swift; path = UI/Diff/DiffCell/DiffSplitTableViewCell.swift; sourceTree = "<group>"; };
 		E81B02691EB0AA7100EC71B4 /* GitPull-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitPull-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E81B026E1EB0AA7100EC71B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E81B02711EB0AA7100EC71B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E81B02711EB0AA7100EC71B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PullRequest.storyboard; sourceTree = "<group>"; };
 		E81B02731EB0AA7100EC71B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81B02761EB0AA7100EC71B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E81B02781EB0AA7100EC71B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +74,31 @@
 		E81B02881EB0AA7100EC71B4 /* GitPull-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitPull-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81B028C1EB0AA7100EC71B4 /* GitPull_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitPull_iOSUITests.swift; sourceTree = "<group>"; };
 		E81B028E1EB0AA7100EC71B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E81B029E1EB0AD5E00EC71B4 /* BaseRESTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRESTService.swift; path = Service/BaseRESTService.swift; sourceTree = "<group>"; };
+		E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkActivityIndicatorHelper.swift; path = Utilities/NetworkActivityIndicatorHelper.swift; sourceTree = "<group>"; };
+		E82F883D1EB1126F0066EB89 /* Diff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diff.swift; path = Model/Diff.swift; sourceTree = "<group>"; };
+		E82F88421EB122920066EB89 /* GitPRService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitPRService.swift; path = Service/GitPRService.swift; sourceTree = "<group>"; };
+		E82F88431EB122920066EB89 /* GitServiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitServiceConstants.swift; path = Service/GitServiceConstants.swift; sourceTree = "<group>"; };
+		E82F88461EB122B80066EB89 /* DiffCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiffCell.xib; path = UI/Diff/DiffCell/DiffCell.xib; sourceTree = "<group>"; };
+		E82F88481EB123460066EB89 /* DiffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffTableViewCell.swift; path = UI/Diff/DiffCell/DiffTableViewCell.swift; sourceTree = "<group>"; };
+		E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeDiffTableViewCell.swift; path = UI/Diff/DiffCell/LargeDiffTableViewCell.swift; sourceTree = "<group>"; };
+		E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+DiffColor.swift"; path = "Utilities/UIColor+DiffColor.swift"; sourceTree = "<group>"; };
+		E82F88561EB1A5160066EB89 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Regex.swift"; path = "Utilities/String+Regex.swift"; sourceTree = "<group>"; };
+		E82F885A1EB1C5E00066EB89 /* DateFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatters.swift; path = Utilities/DateFormatters.swift; sourceTree = "<group>"; };
+		E82F885D1EB1CC110066EB89 /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoaderView.xib; path = UI/Loader/LoaderView.xib; sourceTree = "<group>"; };
+		E82F885F1EB1CCBB0066EB89 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoaderView.swift; path = UI/Loader/LoaderView.swift; sourceTree = "<group>"; };
+		E83150B71EB0B57400D7F1D0 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequest.swift; path = Model/PullRequest.swift; sourceTree = "<group>"; };
+		E83150B91EB0C03600D7F1D0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestTableViewController.swift; path = UI/PullRequest/PullRequestTableViewController.swift; sourceTree = "<group>"; };
+		E83150C31EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestTableViewCell.swift; path = UI/PullRequest/Cell/PullRequestTableViewCell.swift; sourceTree = "<group>"; };
+		E83150C51EB0CCC600D7F1D0 /* PullRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PullRequestCell.xib; path = UI/PullRequest/Cell/PullRequestCell.xib; sourceTree = "<group>"; };
+		E84942291EB0E88F005B88B8 /* Diff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Diff.storyboard; path = UI/Diff/Diff.storyboard; sourceTree = "<group>"; };
+		E849422B1EB0F044005B88B8 /* GitDiffService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitDiffService.swift; path = Service/GitDiffService.swift; sourceTree = "<group>"; };
+		E849422D1EB0F1AE005B88B8 /* DiffTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffTableViewController.swift; path = UI/Diff/DiffTableViewController.swift; sourceTree = "<group>"; };
+		E849422F1EB0F494005B88B8 /* DiffViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffViewModel.swift; path = UI/Diff/DiffViewModel.swift; sourceTree = "<group>"; };
+		E8A601281EB3749E00388109 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Utilities/Queue.swift; sourceTree = "<group>"; };
+		E8C74E121EB31CCB00E5B61F /* DiffRegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffRegexHelper.swift; path = Utilities/DiffRegexHelper.swift; sourceTree = "<group>"; };
+		E8C74E161EB366DF00E5B61F /* String+Lines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Lines.swift"; path = "Utilities/String+Lines.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +149,11 @@
 		E81B026B1EB0AA7100EC71B4 /* GitPull-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E83150BB1EB0C6DA00D7F1D0 /* UI */,
+				E83150B61EB0B55D00D7F1D0 /* Model */,
+				E81B02A01EB0AD7C00EC71B4 /* Utilities */,
+				E81B029A1EB0ABE200EC71B4 /* Service */,
 				E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */,
-				E81B026E1EB0AA7100EC71B4 /* ViewController.swift */,
-				E81B02701EB0AA7100EC71B4 /* Main.storyboard */,
 				E81B02731EB0AA7100EC71B4 /* Assets.xcassets */,
 				E81B02751EB0AA7100EC71B4 /* LaunchScreen.storyboard */,
 				E81B02781EB0AA7100EC71B4 /* Info.plist */,
@@ -123,6 +177,102 @@
 				E81B028E1EB0AA7100EC71B4 /* Info.plist */,
 			);
 			path = "GitPull-iOSUITests";
+			sourceTree = "<group>";
+		};
+		E81B029A1EB0ABE200EC71B4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E82F88421EB122920066EB89 /* GitPRService.swift */,
+				E82F88431EB122920066EB89 /* GitServiceConstants.swift */,
+				E849422B1EB0F044005B88B8 /* GitDiffService.swift */,
+				E81B029E1EB0AD5E00EC71B4 /* BaseRESTService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		E81B02A01EB0AD7C00EC71B4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */,
+				E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */,
+				E82F88561EB1A5160066EB89 /* String+Regex.swift */,
+				E82F885A1EB1C5E00066EB89 /* DateFormatters.swift */,
+				E8C74E121EB31CCB00E5B61F /* DiffRegexHelper.swift */,
+				E8C74E161EB366DF00E5B61F /* String+Lines.swift */,
+				E8A601281EB3749E00388109 /* Queue.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E82F883F1EB121E50066EB89 /* DiffCell */ = {
+			isa = PBXGroup;
+			children = (
+				E82F88461EB122B80066EB89 /* DiffCell.xib */,
+				E82F88481EB123460066EB89 /* DiffTableViewCell.swift */,
+				E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */,
+				E812062A1EB26AD200B5E4F9 /* DiffSplitCell.xib */,
+				E812062C1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift */,
+			);
+			name = DiffCell;
+			sourceTree = "<group>";
+		};
+		E82F885C1EB1CBF90066EB89 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				E82F885D1EB1CC110066EB89 /* LoaderView.xib */,
+				E82F885F1EB1CCBB0066EB89 /* LoaderView.swift */,
+			);
+			name = Loader;
+			sourceTree = "<group>";
+		};
+		E83150B61EB0B55D00D7F1D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E83150B71EB0B57400D7F1D0 /* PullRequest.swift */,
+				E83150B91EB0C03600D7F1D0 /* User.swift */,
+				E82F883D1EB1126F0066EB89 /* Diff.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E83150BB1EB0C6DA00D7F1D0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E82F885C1EB1CBF90066EB89 /* Loader */,
+				E83150BD1EB0C71400D7F1D0 /* Diff */,
+				E83150BC1EB0C70200D7F1D0 /* PullRequest */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		E83150BC1EB0C70200D7F1D0 /* PullRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E83150C21EB0C7A700D7F1D0 /* Cell */,
+				E81B02701EB0AA7100EC71B4 /* PullRequest.storyboard */,
+				E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */,
+			);
+			name = PullRequest;
+			sourceTree = "<group>";
+		};
+		E83150BD1EB0C71400D7F1D0 /* Diff */ = {
+			isa = PBXGroup;
+			children = (
+				E82F883F1EB121E50066EB89 /* DiffCell */,
+				E84942291EB0E88F005B88B8 /* Diff.storyboard */,
+				E849422D1EB0F1AE005B88B8 /* DiffTableViewController.swift */,
+				E849422F1EB0F494005B88B8 /* DiffViewModel.swift */,
+			);
+			name = Diff;
+			sourceTree = "<group>";
+		};
+		E83150C21EB0C7A700D7F1D0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E83150C31EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift */,
+				E83150C51EB0CCC600D7F1D0 /* PullRequestCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +343,7 @@
 				TargetAttributes = {
 					E81B02681EB0AA7100EC71B4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					E81B027C1EB0AA7100EC71B4 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -232,9 +382,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82F885E1EB1CC110066EB89 /* LoaderView.xib in Resources */,
+				E82F88471EB122B80066EB89 /* DiffCell.xib in Resources */,
+				E849422A1EB0E88F005B88B8 /* Diff.storyboard in Resources */,
 				E81B02771EB0AA7100EC71B4 /* LaunchScreen.storyboard in Resources */,
 				E81B02741EB0AA7100EC71B4 /* Assets.xcassets in Resources */,
-				E81B02721EB0AA7100EC71B4 /* Main.storyboard in Resources */,
+				E83150C61EB0CCC600D7F1D0 /* PullRequestCell.xib in Resources */,
+				E81B02721EB0AA7100EC71B4 /* PullRequest.storyboard in Resources */,
+				E812062B1EB26AD200B5E4F9 /* DiffSplitCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +414,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81B026F1EB0AA7100EC71B4 /* ViewController.swift in Sources */,
+				E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */,
+				E8C74E131EB31CCB00E5B61F /* DiffRegexHelper.swift in Sources */,
+				E82F88571EB1A5160066EB89 /* String+Regex.swift in Sources */,
+				E82F884D1EB14AB40066EB89 /* LargeDiffTableViewCell.swift in Sources */,
+				E82F88551EB1763A0066EB89 /* UIColor+DiffColor.swift in Sources */,
+				E82F88451EB122920066EB89 /* GitServiceConstants.swift in Sources */,
 				E81B026D1EB0AA7100EC71B4 /* AppDelegate.swift in Sources */,
+				E82F883E1EB1126F0066EB89 /* Diff.swift in Sources */,
+				E82F88601EB1CCBB0066EB89 /* LoaderView.swift in Sources */,
+				E82F88491EB123460066EB89 /* DiffTableViewCell.swift in Sources */,
+				E83150BA1EB0C03600D7F1D0 /* User.swift in Sources */,
+				E82F88441EB122920066EB89 /* GitPRService.swift in Sources */,
+				E83150C11EB0C76B00D7F1D0 /* PullRequestTableViewController.swift in Sources */,
+				E81B029F1EB0AD5E00EC71B4 /* BaseRESTService.swift in Sources */,
+				E82F885B1EB1C5E00066EB89 /* DateFormatters.swift in Sources */,
+				E83150C41EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift in Sources */,
+				E812062D1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift in Sources */,
+				E8C74E171EB366DF00E5B61F /* String+Lines.swift in Sources */,
+				E8A601291EB3749E00388109 /* Queue.swift in Sources */,
+				E81B02A21EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift in Sources */,
+				E84942301EB0F494005B88B8 /* DiffViewModel.swift in Sources */,
+				E849422C1EB0F044005B88B8 /* GitDiffService.swift in Sources */,
+				E849422E1EB0F1AE005B88B8 /* DiffTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +472,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E81B02701EB0AA7100EC71B4 /* Main.storyboard */ = {
+		E81B02701EB0AA7100EC71B4 /* PullRequest.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E81B02711EB0AA7100EC71B4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = PullRequest.storyboard;
 			sourceTree = "<group>";
 		};
 		E81B02751EB0AA7100EC71B4 /* LaunchScreen.storyboard */ = {
@@ -412,11 +588,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "GitPull-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.budhathoki..GitPull-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,11 +604,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "GitPull-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.budhathoki..GitPull-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -505,6 +689,7 @@
 				E81B02931EB0AA7100EC71B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E81B02941EB0AA7100EC71B4 /* Build configuration list for PBXNativeTarget "GitPull-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +698,7 @@
 				E81B02961EB0AA7100EC71B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E81B02971EB0AA7100EC71B4 /* Build configuration list for PBXNativeTarget "GitPull-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +707,7 @@
 				E81B02991EB0AA7100EC71B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
