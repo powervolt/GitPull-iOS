@@ -41,7 +41,7 @@ struct Diff {
                 self.type = .renamed
                 let simailartyPercentage = line.matchingString(pattern: DiffRegexHelper.similarityPercentage)
                 if (simailartyPercentage == "100%") {
-                    self.changes = ["File renamed without changes."]
+                    self.changes = []
                     return
                 }
             }
@@ -112,8 +112,8 @@ extension Diff {
         var addedLineNumber = 0
         var removedLineNumber = 0
         
-        var addStack = Queue<(Int, String)>()
-        var removeStack = Queue<(Int, String)>()
+        var addQueue = Queue<(Int, String)>()
+        var removeQueue = Queue<(Int, String)>()
         
         for line in self.changes {
             if (line.characters.count == 0) {
@@ -123,7 +123,11 @@ extension Diff {
             let firstChar = line.characters.first!
             
             if (line.matches(pattern: DiffRegexHelper.lineNumberPattern)) {
-                attributedDiff.append(self.getAttribute(forLine:line, type: .info))
+                var colorType: DiffLineType = .info
+                if (type == .added) {
+                    colorType = .clear
+                }
+                attributedDiff.append(self.getAttribute(forLine:line, type: colorType))
                 if let addedNumber = Diff.getAddedLineNumber(fromInfo: line) {
                     addedLineNumber = addedNumber
                 }
@@ -133,38 +137,32 @@ extension Diff {
                 }
               
             } else if firstChar == "-" {
-                if (type == .all || type == .removed) {
+                if (type == .all) {
                     attributedDiff.append(self.getAttribute(forLineNumber: removedLineNumber, type: .removed))
                     attributedDiff.append(self.getAttribute(forLine:line, type: .removed))
-                    
-                }
-                
-                if type != .all {
-                    removeStack.enqueue((removedLineNumber, line))
+                } else {
+                    removeQueue.enqueue((removedLineNumber, line))
                 }
                 
                 removedLineNumber += 1
             
             } else if firstChar == "+" {
-                if (type == .all || type == .added) {
+                if (type == .all) {
                     attributedDiff.append(self.getAttribute(forLineNumber: addedLineNumber, type: .added))
                     attributedDiff.append(self.getAttribute(forLine:line, type: .added))
-                }
-                
-                if type != .all {
-                    addStack.enqueue((addedLineNumber, line))
+                } else {
+                    addQueue.enqueue((addedLineNumber, line))
                 }
                 
                 addedLineNumber += 1
                 
             } else if (firstChar == " ") { // unchanged
-                
                 if (type != .all) {
-                    let attString = self.fillExtraSpace(type: type, addStack: addStack, removeStack: removeStack, label: label)
+                    let attString = self.fillExtraSpace(type: type, addQueue:addQueue, removeQueue: removeQueue, label: label)
                     attributedDiff.append(attString)
                     // new cycle remove all
-                    addStack.dequeueAll()
-                    removeStack.dequeueAll()
+                    addQueue.dequeueAll()
+                    removeQueue.dequeueAll()
                 }
                 
                 var lineNumber = removedLineNumber
@@ -181,33 +179,44 @@ extension Diff {
             }
         }
         
-        let attString = self.fillExtraSpace(type: type, addStack: addStack, removeStack: removeStack)
+        let attString = self.fillExtraSpace(type: type, addQueue: addQueue, removeQueue: removeQueue)
         attributedDiff.append(attString)
     
         return attributedDiff
     }
     
     //MARK: NSAttributedString Helpers
-    private func fillExtraSpace(type: DiffAttType, addStack: Queue<(Int, String)>, removeStack: Queue<(Int, String)>, label: UILabel? = nil) -> NSAttributedString {
+    private func fillExtraSpace(type: DiffAttType, addQueue: Queue<(Int, String)>, removeQueue: Queue<(Int, String)>, label: UILabel? = nil) -> NSAttributedString {
         
-        var addStack = addStack
-        var removeStack = removeStack
+        var addQueue = addQueue
+        var removeQueue = removeQueue
         
         
-        var largerCount = addStack.count
+        var largerCount = addQueue.count
         
-        if addStack.count < removeStack.count {
-            largerCount = removeStack.count
+        if addQueue.count < removeQueue.count {
+            largerCount = removeQueue.count
         }
         let attributedDiff = NSMutableAttributedString()
         
         
         while(largerCount > 0) {
-            let addValue = addStack.dequeue()
-            let removeValue = removeStack.dequeue()
+            let addValue = addQueue.dequeue()
+            let removeValue = removeQueue.dequeue()
             
+            //append the appropriate diff value
+            if (type == .added && addValue != nil) {
+                attributedDiff.append(self.getAttribute(forLineNumber: addValue!.0, type: .added))
+                attributedDiff.append(self.getAttribute(forLine:addValue!.1, type: .added))
+            }
+            
+            if (type == .removed && removeValue != nil) {
+                attributedDiff.append(self.getAttribute(forLineNumber: removeValue!.0, type: .removed))
+                attributedDiff.append(self.getAttribute(forLine:removeValue!.1, type: .removed))
+            }
+            
+            //check for sizing differnce on the change
             if let addValue = addValue, let removeValue = removeValue, let label = label {
-                //check size
 
                 let numberOfLinesForAdd = self.getNumberOfLines(for: addValue, in: label)
                 let numberOfLinesForRemove = self.getNumberOfLines(for: removeValue, in: label)
@@ -216,7 +225,7 @@ extension Diff {
 
                 if (type == .added && difference < 0) {
                     for _ in 0...abs(difference) {
-                        attributedDiff.append(self.getAttribute(forLine:"", type: .clear))
+                        attributedDiff.append(self.getAttribute(forLine:"", type: .added))
                     }
                 } else if (type == .removed && difference > 0) {
                     for _ in 0...difference {
@@ -224,16 +233,13 @@ extension Diff {
                     }
                 }
                 
-            } else if (type == .added) {
-                if (addValue == nil) {
-                    attributedDiff.append(self.getAttribute(forLineNumber: removeValue!.0, type: .clear))
-                    attributedDiff.append(self.getAttribute(forLine:removeValue!.1, type: .clear))
-                }
-            } else if (type == .removed) {
-                if (removeValue == nil) {
-                    attributedDiff.append(self.getAttribute(forLineNumber: addValue!.0, type: .clear))
-                    attributedDiff.append(self.getAttribute(forLine:addValue!.1, type: .clear))
-                } 
+            } else if (type == .added && addValue == nil) {
+                attributedDiff.append(self.getAttribute(forLineNumber: removeValue!.0, type: .clear))
+                attributedDiff.append(self.getAttribute(forLine:removeValue!.1, type: .clear))
+                
+            } else if (type == .removed && removeValue == nil) {
+                attributedDiff.append(self.getAttribute(forLineNumber: addValue!.0, type: .clear))
+                attributedDiff.append(self.getAttribute(forLine:addValue!.1, type: .clear))
             }
             
             largerCount -= 1

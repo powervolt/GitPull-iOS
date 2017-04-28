@@ -12,6 +12,7 @@ class DiffTableViewController: UITableViewController {
     
     let viewModel = DiffViewModelImpl()
     var pullRequest: PullRequest!
+    var isPotrait = true
     
     private let loader = LoaderView.viewFromXIB()
     override func viewDidLoad() {
@@ -87,13 +88,11 @@ class DiffTableViewController: UITableViewController {
             }
         }
         
-        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+        if !isPotrait {
             if let splitCell = tableView.dequeueReusableCell(withIdentifier: DiffSplitTableViewCell.reuseIdentifier, for: indexPath) as? DiffSplitTableViewCell {
                 splitCell.setup(diff: diff)
                 return splitCell
             }
-            
-            
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: DiffTableViewCell.reuseIdentifier, for: indexPath)
@@ -113,6 +112,18 @@ class DiffTableViewController: UITableViewController {
 
 extension DiffTableViewController {
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if (UIDevice.current.orientation.isPortrait) {
+            self.isPotrait = true
+        } else {
+            self.isPotrait = false
+        }
+        
+        coordinator.animate(alongsideTransition: { (_) in
+            self.tableView.reloadData()
+        }, completion: nil)
     }
 }

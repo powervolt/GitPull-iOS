@@ -12,8 +12,7 @@ extension String {
 
     func numberOfLines(in label: UILabel) -> Int {
         let textStorage = NSTextStorage(string: self, attributes: [NSFontAttributeName: label.font])
-        let size = CGSize(width: label.frame.size.width-16, height: label.frame.size.height)
-        let textContainer = NSTextContainer(size: size)
+        let textContainer = NSTextContainer(size: label.frame.size)
         textContainer.lineBreakMode = label.lineBreakMode
         textContainer.maximumNumberOfLines = 0
         textContainer.lineFragmentPadding = 0
