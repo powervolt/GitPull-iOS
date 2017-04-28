@@ -35,7 +35,7 @@ class DiffViewModelImpl {
         let stringArray = string.components(separatedBy: .newlines)
         func appendData(start:Int, end:Int) {
             let newArray: ArraySlice<String> = stringArray[start...end]
-            let diff = Diff(diff: Array(newArray))
+            let diff = Diff(diffLines: Array(newArray))
             if let diff = diff {
                 diffArray.append(diff)
             }
@@ -50,9 +50,8 @@ class DiffViewModelImpl {
                 continue
             }
             
-            let firstChar = line.characters.first!
-            //if line starts with "Diff"
-            if (firstChar == "d" && line.contains("diff --git")) {
+            //if line start of a new diff
+            if (line.matches(pattern: DiffRegexHelper.gitDiffPattern)) {
                 if (!first) {
                     appendData(start: topIndex, end: index-1)
                     topIndex = index
@@ -62,11 +61,13 @@ class DiffViewModelImpl {
             }
         }
         
+        //append the last diff 
         appendData(start: topIndex, end: stringArray.count-1)
     }
     
     func shouldHideFullDiff(index: Int) -> Bool {
-        if self.diffArray[index].changes.count > 40 && !self.diffReloadIndex.contains(index) {
+        let diff = self.diffArray[index]
+        if (diff.changes.count > 40 || diff.type != .normal) && !self.diffReloadIndex.contains(index) {
             return true
         }
         

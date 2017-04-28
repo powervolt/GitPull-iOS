@@ -24,7 +24,13 @@ class GitDiffServiceImpl: GitDiffService {
     
     func getDiff(url: String, completionHandler: @escaping DiffCompletionHandler) {
         serviceHelper.sendRequest(url: url, method: .Get, headers: GitServiceConstants.defaultHeaders) { (data, status, error) in
-            if status == 200 && error == nil {
+            
+            if let error = error {
+                completionHandler(nil, error)
+                return
+            }
+            
+            if status == 200 {
                 guard let data = data else {
                     let error = NSError(domain: "Data is empty", code: status, userInfo: nil)
                     completionHandler(nil, error)

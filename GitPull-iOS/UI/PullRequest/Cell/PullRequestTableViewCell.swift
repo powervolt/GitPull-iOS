@@ -21,15 +21,15 @@ class PullRequestTableViewCell: UITableViewCell {
 
         //setup profile imageview
         profileImageView.layer.masksToBounds = true
-        profileImageView.layer.borderWidth = 2
-        profileImageView.layer.borderColor = UIColor.white.cgColor
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.borderColor = UIColor.lightTitleColor.cgColor
         profileImageView.layer.cornerRadius = profileImageView.bounds.width/2
     }
     
     func setup(pullRequest: PullRequest) {
         self.titleLabel.text = pullRequest.title
         self.numberLabel.text = "#\(pullRequest.number)"
-        self.infoLabel.text = "opened on Dev 27 by \(pullRequest.user?.login ?? ""))"
+        self.infoLabel.text = "opened on \(DateFormatters.shortFormatter.string(from: pullRequest.created)) by \(pullRequest.user?.login ?? ""))"
     }
 
     override func prepareForReuse() {

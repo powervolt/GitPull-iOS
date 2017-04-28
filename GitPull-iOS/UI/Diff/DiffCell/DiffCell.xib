@@ -18,11 +18,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="385" height="303"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS5-ij-QhM">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS5-ij-QhM">
                         <rect key="frame" x="8" y="25" width="369" height="270"/>
-                        <attributedString key="attributedText">
-                            <fragment>
-                                <string key="content">To create and insert a new instance of an Entity in the default context, you can use:
+                        <string key="text">To create and insert a new instance of an Entity in the default context, you can use:
  
  ```objective-c
 +// Objective-C
@@ -36,12 +34,8 @@
 +
 +
  To create and insert an entity into specific context:</string>
-                                <attributes>
-                                    <font key="NSFont" size="12" name=".SFNSText"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqz-9s-2lI">
@@ -78,7 +72,7 @@
                 <outlet property="diffLabel" destination="qS5-ij-QhM" id="igS-1H-2QR"/>
                 <outlet property="fileNameLabel" destination="KKv-rl-q62" id="J1C-NN-itS"/>
             </connections>
-            <point key="canvasLocation" x="-30.5" y="53.5"/>
+            <point key="canvasLocation" x="-312" y="-84"/>
         </tableViewCell>
     </objects>
 </document>

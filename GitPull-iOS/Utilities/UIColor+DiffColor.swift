@@ -36,13 +36,13 @@ extension UIColor {
     
     static var diffDarkAddedColor: UIColor {
         get {
-            return UIColor(red:0.92, green:1.00, blue:0.92, alpha:1.0)
+            return UIColor(red:0.84, green:1.00, blue:0.84, alpha:1.0)
         }
     }
     
     static var diffDarkDeletedColor: UIColor {
         get {
-            return UIColor(red:1.00, green:0.93, blue:0.93, alpha:1.0)
+            return UIColor(red:1.00, green:0.87, blue:0.87, alpha:1.0)
         }
     }
     

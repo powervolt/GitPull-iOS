@@ -6,14 +6,16 @@
 //  Copyright © 2017 Bipin. All rights reserved.
 //
 
-struct PullRequest {
+import Foundation
 
-    var title: String
-    var diffUrl: String
-    var number: Int
-    var state: String
-    var user: User?
-    var locked: Bool
+struct PullRequest {
+    private(set) var title: String
+    private(set) var diffUrl: String
+    private(set) var number: Int
+    private(set) var state: String
+    private(set) var user: User?
+    private(set) var locked: Bool
+    private(set) var created: Date
     
     init?(dictionary: [String : Any]) {
         guard let title = dictionary["title"] as? String  else {
@@ -36,6 +38,12 @@ struct PullRequest {
             return nil
         }
         
+        guard let dateString = dictionary["created_at"] as? String  else {
+            return nil
+        }
+        
+        self.created = DateFormatters.UTCformatter.date(from: dateString)!
+        
         self.title = title
         self.diffUrl = diffUrl
         self.number = number
@@ -47,8 +55,8 @@ struct PullRequest {
                 self.user = user
             }
         }
+        
     }
-    
 }
 
 extension PullRequest {

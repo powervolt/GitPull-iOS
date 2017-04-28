@@ -15,25 +15,41 @@ class PullRequestTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTableView()
+        self.setupTableViewCell()
+        self.setupRefreshControl()
+        
+        self.refreshControl?.beginRefreshing()
+        self.fetchData()
+    }
     
+    func fetchData() {
         service.getPullRequests(status: .Open) { (pullRequests, error) in
             if let pullRequests = pullRequests {
                 self.pullRequests = pullRequests.sorted(by: {$0.number > $1.number})
                 DispatchQueue.main.async {
                     self.navigationItem.title = "Pull Requests (\(self.pullRequests.count))"
                     self.tableView.reloadData()
+                    if (self.refreshControl?.isRefreshing ?? false) {
+                        self.refreshControl?.endRefreshing()
+                    }
                 }
             }
         }
     }
     
-    private func setupTableView() {
+    private func setupTableViewCell() {
         let nib = UINib(nibName: "PullRequestCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: PullRequestTableViewCell.reuseIdentifier)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
     }
+    
+    private func setupRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        self.refreshControl = refreshControl
+    }
+    
 
     // MARK: - Table view data source
 
@@ -74,7 +90,5 @@ class PullRequestTableViewController: UITableViewController {
             vc.pullRequest = pr
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
-        
     }
 }

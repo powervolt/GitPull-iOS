@@ -26,26 +26,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ins-Gs-Fu9">
-                                            <rect key="frame" x="154" y="8" width="67" height="40.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                            <state key="normal" title="Load diff"/>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Large diffs are not rendered by default" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EKB-z4-Pfr">
-                                            <rect key="frame" x="71.5" y="48.5" width="233" height="16"/>
+                                            <rect key="frame" x="8" y="49" width="359" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="Oev-Xe-vt0"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.35027024150000002" green="0.37595009800000001" blue="0.40793010590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Large Diff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNg-1e-QxR">
+                                            <rect key="frame" x="18" y="16" width="339" height="25"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="EKB-z4-Pfr" secondAttribute="bottom" id="3Vh-nv-bnn"/>
-                                        <constraint firstItem="Ins-Gs-Fu9" firstAttribute="top" secondItem="2M9-et-XRy" secondAttribute="topMargin" id="4xI-vD-885"/>
-                                        <constraint firstItem="Ins-Gs-Fu9" firstAttribute="centerX" secondItem="2M9-et-XRy" secondAttribute="centerX" id="FBD-lH-A6B"/>
-                                        <constraint firstItem="EKB-z4-Pfr" firstAttribute="top" secondItem="Ins-Gs-Fu9" secondAttribute="bottom" id="S9C-ae-uI7"/>
-                                        <constraint firstItem="EKB-z4-Pfr" firstAttribute="centerX" secondItem="Ins-Gs-Fu9" secondAttribute="centerX" id="oUB-6t-BjR"/>
+                                        <constraint firstItem="EKB-z4-Pfr" firstAttribute="leading" secondItem="2M9-et-XRy" secondAttribute="leading" constant="8" id="Fl6-CI-VK6"/>
+                                        <constraint firstItem="vNg-1e-QxR" firstAttribute="top" secondItem="2M9-et-XRy" secondAttribute="topMargin" constant="8" id="NPz-vn-h9V"/>
+                                        <constraint firstItem="vNg-1e-QxR" firstAttribute="leading" secondItem="2M9-et-XRy" secondAttribute="leadingMargin" constant="10" id="PEP-NM-rEE"/>
+                                        <constraint firstAttribute="bottom" secondItem="EKB-z4-Pfr" secondAttribute="bottom" constant="8" id="ZbR-Up-Lt7"/>
+                                        <constraint firstAttribute="trailing" secondItem="EKB-z4-Pfr" secondAttribute="trailing" constant="8" id="bXJ-kM-DOV"/>
+                                        <constraint firstItem="EKB-z4-Pfr" firstAttribute="top" secondItem="vNg-1e-QxR" secondAttribute="bottom" constant="8" id="fX5-I8-Cdy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vNg-1e-QxR" secondAttribute="trailing" constant="10" id="tw1-MD-KI1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="subTitleLabel" destination="EKB-z4-Pfr" id="cgR-Bj-EKt"/>
+                                    <outlet property="titleLabel" destination="vNg-1e-QxR" id="lJy-Ge-9RD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

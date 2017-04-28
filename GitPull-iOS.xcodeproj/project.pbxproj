@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E812062B1EB26AD200B5E4F9 /* DiffSplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E812062A1EB26AD200B5E4F9 /* DiffSplitCell.xib */; };
+		E812062D1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E812062C1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift */; };
 		E81B026D1EB0AA7100EC71B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */; };
 		E81B02721EB0AA7100EC71B4 /* PullRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B02701EB0AA7100EC71B4 /* PullRequest.storyboard */; };
 		E81B02741EB0AA7100EC71B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81B02731EB0AA7100EC71B4 /* Assets.xcassets */; };
@@ -23,6 +25,9 @@
 		E82F884D1EB14AB40066EB89 /* LargeDiffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */; };
 		E82F88551EB1763A0066EB89 /* UIColor+DiffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */; };
 		E82F88571EB1A5160066EB89 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F88561EB1A5160066EB89 /* String+Regex.swift */; };
+		E82F885B1EB1C5E00066EB89 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F885A1EB1C5E00066EB89 /* DateFormatters.swift */; };
+		E82F885E1EB1CC110066EB89 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82F885D1EB1CC110066EB89 /* LoaderView.xib */; };
+		E82F88601EB1CCBB0066EB89 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F885F1EB1CCBB0066EB89 /* LoaderView.swift */; };
 		E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B71EB0B57400D7F1D0 /* PullRequest.swift */; };
 		E83150BA1EB0C03600D7F1D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150B91EB0C03600D7F1D0 /* User.swift */; };
 		E83150C11EB0C76B00D7F1D0 /* PullRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */; };
@@ -32,6 +37,9 @@
 		E849422C1EB0F044005B88B8 /* GitDiffService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849422B1EB0F044005B88B8 /* GitDiffService.swift */; };
 		E849422E1EB0F1AE005B88B8 /* DiffTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849422D1EB0F1AE005B88B8 /* DiffTableViewController.swift */; };
 		E84942301EB0F494005B88B8 /* DiffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849422F1EB0F494005B88B8 /* DiffViewModel.swift */; };
+		E8A601291EB3749E00388109 /* SwiftQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A601281EB3749E00388109 /* SwiftQueue.swift */; };
+		E8C74E131EB31CCB00E5B61F /* DiffRegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C74E121EB31CCB00E5B61F /* DiffRegexHelper.swift */; };
+		E8C74E171EB366DF00E5B61F /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C74E161EB366DF00E5B61F /* String+Lines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E812062A1EB26AD200B5E4F9 /* DiffSplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiffSplitCell.xib; sourceTree = "<group>"; };
+		E812062C1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffSplitTableViewCell.swift; path = UI/Diff/DiffCell/DiffSplitTableViewCell.swift; sourceTree = "<group>"; };
 		E81B02691EB0AA7100EC71B4 /* GitPull-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitPull-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81B026C1EB0AA7100EC71B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E81B02711EB0AA7100EC71B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PullRequest.storyboard; sourceTree = "<group>"; };
@@ -74,6 +84,9 @@
 		E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LargeDiffTableViewCell.swift; path = UI/Diff/DiffCell/LargeDiffTableViewCell.swift; sourceTree = "<group>"; };
 		E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+DiffColor.swift"; path = "Utilities/UIColor+DiffColor.swift"; sourceTree = "<group>"; };
 		E82F88561EB1A5160066EB89 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Regex.swift"; path = "Utilities/String+Regex.swift"; sourceTree = "<group>"; };
+		E82F885A1EB1C5E00066EB89 /* DateFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatters.swift; path = Utilities/DateFormatters.swift; sourceTree = "<group>"; };
+		E82F885D1EB1CC110066EB89 /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoaderView.xib; path = UI/Loader/LoaderView.xib; sourceTree = "<group>"; };
+		E82F885F1EB1CCBB0066EB89 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoaderView.swift; path = UI/Loader/LoaderView.swift; sourceTree = "<group>"; };
 		E83150B71EB0B57400D7F1D0 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequest.swift; path = Model/PullRequest.swift; sourceTree = "<group>"; };
 		E83150B91EB0C03600D7F1D0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		E83150C01EB0C76B00D7F1D0 /* PullRequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequestTableViewController.swift; path = UI/PullRequest/PullRequestTableViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +96,9 @@
 		E849422B1EB0F044005B88B8 /* GitDiffService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitDiffService.swift; path = Service/GitDiffService.swift; sourceTree = "<group>"; };
 		E849422D1EB0F1AE005B88B8 /* DiffTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffTableViewController.swift; path = UI/Diff/DiffTableViewController.swift; sourceTree = "<group>"; };
 		E849422F1EB0F494005B88B8 /* DiffViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffViewModel.swift; path = UI/Diff/DiffViewModel.swift; sourceTree = "<group>"; };
+		E8A601281EB3749E00388109 /* SwiftQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftQueue.swift; path = Utilities/SwiftQueue.swift; sourceTree = "<group>"; };
+		E8C74E121EB31CCB00E5B61F /* DiffRegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiffRegexHelper.swift; path = Utilities/DiffRegexHelper.swift; sourceTree = "<group>"; };
+		E8C74E161EB366DF00E5B61F /* String+Lines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Lines.swift"; path = "Utilities/String+Lines.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +196,10 @@
 				E81B02A11EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift */,
 				E82F88541EB1763A0066EB89 /* UIColor+DiffColor.swift */,
 				E82F88561EB1A5160066EB89 /* String+Regex.swift */,
+				E82F885A1EB1C5E00066EB89 /* DateFormatters.swift */,
+				E8C74E121EB31CCB00E5B61F /* DiffRegexHelper.swift */,
+				E8C74E161EB366DF00E5B61F /* String+Lines.swift */,
+				E8A601281EB3749E00388109 /* SwiftQueue.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -190,8 +210,19 @@
 				E82F88461EB122B80066EB89 /* DiffCell.xib */,
 				E82F88481EB123460066EB89 /* DiffTableViewCell.swift */,
 				E82F884C1EB14AB40066EB89 /* LargeDiffTableViewCell.swift */,
+				E812062A1EB26AD200B5E4F9 /* DiffSplitCell.xib */,
+				E812062C1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift */,
 			);
 			name = DiffCell;
+			sourceTree = "<group>";
+		};
+		E82F885C1EB1CBF90066EB89 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				E82F885D1EB1CC110066EB89 /* LoaderView.xib */,
+				E82F885F1EB1CCBB0066EB89 /* LoaderView.swift */,
+			);
+			name = Loader;
 			sourceTree = "<group>";
 		};
 		E83150B61EB0B55D00D7F1D0 /* Model */ = {
@@ -207,6 +238,7 @@
 		E83150BB1EB0C6DA00D7F1D0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E82F885C1EB1CBF90066EB89 /* Loader */,
 				E83150BD1EB0C71400D7F1D0 /* Diff */,
 				E83150BC1EB0C70200D7F1D0 /* PullRequest */,
 			);
@@ -351,12 +383,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82F885E1EB1CC110066EB89 /* LoaderView.xib in Resources */,
 				E82F88471EB122B80066EB89 /* DiffCell.xib in Resources */,
 				E849422A1EB0E88F005B88B8 /* Diff.storyboard in Resources */,
 				E81B02771EB0AA7100EC71B4 /* LaunchScreen.storyboard in Resources */,
 				E81B02741EB0AA7100EC71B4 /* Assets.xcassets in Resources */,
 				E83150C61EB0CCC600D7F1D0 /* PullRequestCell.xib in Resources */,
 				E81B02721EB0AA7100EC71B4 /* PullRequest.storyboard in Resources */,
+				E812062B1EB26AD200B5E4F9 /* DiffSplitCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,18 +416,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83150B81EB0B57400D7F1D0 /* PullRequest.swift in Sources */,
+				E8C74E131EB31CCB00E5B61F /* DiffRegexHelper.swift in Sources */,
 				E82F88571EB1A5160066EB89 /* String+Regex.swift in Sources */,
 				E82F884D1EB14AB40066EB89 /* LargeDiffTableViewCell.swift in Sources */,
 				E82F88551EB1763A0066EB89 /* UIColor+DiffColor.swift in Sources */,
 				E82F88451EB122920066EB89 /* GitServiceConstants.swift in Sources */,
 				E81B026D1EB0AA7100EC71B4 /* AppDelegate.swift in Sources */,
 				E82F883E1EB1126F0066EB89 /* Diff.swift in Sources */,
+				E82F88601EB1CCBB0066EB89 /* LoaderView.swift in Sources */,
 				E82F88491EB123460066EB89 /* DiffTableViewCell.swift in Sources */,
 				E83150BA1EB0C03600D7F1D0 /* User.swift in Sources */,
 				E82F88441EB122920066EB89 /* GitPRService.swift in Sources */,
 				E83150C11EB0C76B00D7F1D0 /* PullRequestTableViewController.swift in Sources */,
 				E81B029F1EB0AD5E00EC71B4 /* BaseRESTService.swift in Sources */,
+				E82F885B1EB1C5E00066EB89 /* DateFormatters.swift in Sources */,
 				E83150C41EB0C7D400D7F1D0 /* PullRequestTableViewCell.swift in Sources */,
+				E812062D1EB2714A00B5E4F9 /* DiffSplitTableViewCell.swift in Sources */,
+				E8C74E171EB366DF00E5B61F /* String+Lines.swift in Sources */,
+				E8A601291EB3749E00388109 /* SwiftQueue.swift in Sources */,
 				E81B02A21EB0ADAB00EC71B4 /* NetworkActivityIndicatorHelper.swift in Sources */,
 				E84942301EB0F494005B88B8 /* DiffViewModel.swift in Sources */,
 				E849422C1EB0F044005B88B8 /* GitDiffService.swift in Sources */,

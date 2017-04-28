@@ -68,6 +68,12 @@ class BaseRESTServiceImpl: BaseRESTService {
             NetworkActivityIndicatorHelper.setIndicator(true)
             let downloadTask = URLSession.shared.downloadTask(with: url) { (url, _ , error) in
                 NetworkActivityIndicatorHelper.setIndicator(false)
+                
+                if let error = error {
+                    completionHandler(nil, error)
+                    return
+                }
+                
                 if let url = url {
                     
                     do {
@@ -82,6 +88,7 @@ class BaseRESTServiceImpl: BaseRESTService {
                     return
                 }
                 
+                let error = NSError(domain: "Error downloading file", code: 500, userInfo: nil)
                 completionHandler(nil, error)
                 return
             }

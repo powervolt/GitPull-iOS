@@ -32,8 +32,13 @@ class GitPRServiceImpl: GitPRService {
     func getPullRequests(status: PullRequestStatus, completionHandler: @escaping GitPRCompletionHandler) {
         let url = String(format: GitServiceConstants.repoUrl, status.rawValue)
         self.restHelper.sendRequest(url: url, method: .Get, headers: GitServiceConstants.defaultHeaders) { (data, status, error) in
+            
+            if let error = error {
+                completionHandler(nil, error)
+                return
+            }
+            
             if (status == 200) {
-                
                 guard let data = data else {
                     let error = NSError(domain: "No Data returned from server", code: status, userInfo: nil)
                     completionHandler(nil, error)
@@ -44,6 +49,7 @@ class GitPRServiceImpl: GitPRService {
                     if let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [Any] {
                         let pullRequests = PullRequest.getPullReqests(serviceData: json)
                         completionHandler(pullRequests, error)
+                        return
                     } else {
                         let error = NSError(domain: "Unable to parse data", code: status, userInfo: nil)
                         completionHandler(nil, error)
@@ -51,10 +57,12 @@ class GitPRServiceImpl: GitPRService {
                     }
                 } catch let error {
                     completionHandler(nil, error)
+                    return
                 }
             } else {
-                
-                //TODO:
+        
+                let error = NSError(domain: "Error retriving pull requests", code: status, userInfo: nil)
+                completionHandler(nil, error)
             }
         }
     }
